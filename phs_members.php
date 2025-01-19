@@ -16,3 +16,9 @@ if(!function_exists('add_action')){
 add_filter ('woocommerce_add_to_cart_redirect', function( $url, $adding_to_cart ) {
   return wc_get_checkout_url();
 }, 10, 2 );
+
+require_once plugin_dir_path(__FILE__) . 'src/loggedOrNonLoggedRedirect.php';
+require_once plugin_dir_path(__FILE__) . 'src/getUserOrdersShortcode.php';
+require_once plugin_dir_path(__FILE__) . 'src/classesAndMembers.php';
+require_once plugin_dir_path(__FILE__) . 'src/changeUserMetaOnPurchase.php';
+require_once plugin_dir_path(__FILE__) . 'src/classMetafieldOnCheckout.php';
